@@ -1,0 +1,30 @@
+Original array (promise): [ 1, 2, 3, 4, 5 ]
+Doubled numbers (promise): [ 2, 4, 6, 8, 10 ]
+Original array (promise): [
+  { id: 1, name: 'John' },
+  { id: 2, name: 'Jane' },
+  { id: 3, name: 'Peter' }
+]
+User names (promise): [ 'John', 'Jane', 'Peter' ]
+Original array (async/await): [ 1, 2, 3, 4, 5 ]
+Doubled numbers (async/await): [ 2, 4, 6, 8, 10 ]
+Original array (async/await): [
+  { id: 1, name: 'John' },
+  { id: 2, name: 'Jane' },
+  { id: 3, name: 'Peter' }
+]
+User names (async/await): [ 'John', 'Jane', 'Peter' ]
+Original array (parallel): [
+  1, 2, 3, 4,  5,
+  6, 7, 8, 9, 10
+]
+Doubled numbers (parallel): [
+   2,  4,  6,  8, 10,
+  12, 14, 16, 18, 20
+]
+Original array (cancellable): [
+  1, 2, 3, 4,  5,
+  6, 7, 8, 9, 10
+]
+Aborting operation
+Operation cancelled Aborted
