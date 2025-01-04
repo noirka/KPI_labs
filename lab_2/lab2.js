@@ -1,5 +1,5 @@
 function promiseMap(array, callback) {
-  return Promise.all(array.map(item => callback(item)));
+    return Promise.all(array.map(item => callback(item)));
 }
 
 function promiseMapWithConcurrency(array, callback, concurrencyLimit = Infinity) {
@@ -48,10 +48,10 @@ function simulateAsyncOperationPromise(value) {
 async function promiseExample1() {
     const numbers = [1, 2, 3, 4, 5];
     console.log("Original array (promise):", numbers);
-    promiseMap(numbers, simulateAsyncOperationPromise)
-    .then((doubledNumbers) => {
-      console.log("Doubled numbers (promise):", doubledNumbers);
-    })
+    return promiseMap(numbers, simulateAsyncOperationPromise)
+        .then((doubledNumbers) => {
+            console.log("Doubled numbers (promise):", doubledNumbers);
+        })
 }
 
 
@@ -63,7 +63,7 @@ async function promiseExample2() {
     ];
     console.log("Original array (promise):", users);
 
-     promiseMap(users, (user) => {
+   return promiseMap(users, (user) => {
         return new Promise((resolve) => {
             setTimeout(() => {
                 resolve(user.name);
@@ -76,10 +76,10 @@ async function promiseExample2() {
 
 
 async function asyncAwaitExample1() {
-  const numbers = [1, 2, 3, 4, 5];
-  console.log("Original array (async/await):", numbers);
-  const doubledNumbers = await promiseMap(numbers, simulateAsyncOperationPromise);
-  console.log("Doubled numbers (async/await):", doubledNumbers);
+    const numbers = [1, 2, 3, 4, 5];
+    console.log("Original array (async/await):", numbers);
+    const doubledNumbers = await promiseMap(numbers, simulateAsyncOperationPromise);
+    console.log("Doubled numbers (async/await):", doubledNumbers);
 }
 
 
@@ -111,8 +111,12 @@ async function parallelExample() {
 }
 
 
-promiseExample1();
-promiseExample2();
-asyncAwaitExample1();
-asyncAwaitExample2();
-parallelExample();
+
+async function main() {
+    await promiseExample1();
+    await promiseExample2();
+    await asyncAwaitExample1();
+    await asyncAwaitExample2();
+    await parallelExample();
+}
+main();
