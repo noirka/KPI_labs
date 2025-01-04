@@ -1,0 +1,12 @@
+Original array: [ 1, 2, 3, 4, 5 ]
+Original array: [
+  { id: 1, name: 'John' },
+  { id: 2, name: 'Jane' },
+  { id: 3, name: 'Peter' }
+]
+Original array: [ 1, 2, 3, 4, 5 ]
+User names: [ 'John', 'Jane', 'Peter' ]
+Debounced results: [ 3, 6, 9, 12, 15 ]
+Doubled numbers: [ 2, 4, 6, 8, 10 ]
+
+Результат може вивестись по іншому через рандомізацію
